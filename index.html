@@ -236,6 +236,196 @@ footer{background:rgba(4,12,13,.97);border-top:1px solid var(--border);padding:5
 .call-opt .clbl{font-size:.75rem;color:var(--muted);margin-top:1px}
 .call-popup-close{position:absolute;top:12px;right:14px;background:rgba(42,190,197,.1);border:none;cursor:pointer;color:var(--light);width:30px;height:30px;border-radius:7px;font-size:.9rem;display:flex;align-items:center;justify-content:center;transition:.2s}
 .call-popup-close:hover{background:rgba(42,190,197,.24)}
+
+
+/* ── Contact Section Layout ── */
+.contact-layout{display:flex;flex-direction:column;gap:48px}
+.contact-row1{display:grid;grid-template-columns:1fr 1.2fr;gap:48px;align-items:start}
+.contact-row2{display:flex;justify-content:center;align-items:center;padding:16px 0 8px}
+.contact-logo-ring{position:relative;width:200px;height:200px;display:flex;align-items:center;justify-content:center}
+.contact-logo-img{width:130px;height:auto;position:relative;z-index:2;filter:drop-shadow(0 0 24px rgba(42,190,197,0.55));animation:float 4s ease-in-out infinite}
+@media(max-width:900px){
+  .contact-row1{grid-template-columns:1fr}
+  .contact-logo-ring{width:160px;height:160px}
+  .contact-logo-img{width:100px}
+}
+@media(max-width:640px){
+  .contact-row1{gap:28px}
+  .contact-logo-ring{width:130px;height:130px}
+  .contact-logo-img{width:80px}
+}
+
+/* ── Light Theme ── */
+body.light-theme{
+  --teal:#07181a;
+  --dark:#eff8f8;
+  --light:#07181a;
+  --card:#d4ecee;
+  --border:rgba(7,24,26,0.18);
+  --muted:rgba(7,24,26,0.58);
+  background:var(--dark);
+  color:var(--light);
+}
+body.light-theme .nbar{background:rgba(239,248,248,0.95);border-bottom-color:rgba(7,24,26,0.12)}
+body.light-theme .nbar-scrolled{background:rgba(239,248,248,0.98)}
+body.light-theme .nlink{color:rgba(7,24,26,0.7)}
+body.light-theme .nlink:hover{color:#07181a}
+body.light-theme .nav-cta{background:#07181a;color:#eff8f8}
+body.light-theme .nav-cta:hover{background:#1a3638}
+body.light-theme .theme-btn{color:#07181a;border-color:rgba(7,24,26,0.2);background:rgba(7,24,26,0.06)}
+body.light-theme .theme-btn:hover{background:rgba(7,24,26,0.12)}
+body.light-theme .lb{color:rgba(7,24,26,0.5)}
+body.light-theme .lb.on{background:#07181a;color:#eff8f8}
+body.light-theme .lang-sw{background:rgba(7,24,26,0.07);border-color:rgba(7,24,26,0.15)}
+body.light-theme .sec.alt{background:rgba(7,24,26,0.04)}
+body.light-theme .hero-section{background:linear-gradient(135deg,#eff8f8 0%,#d4ecee 50%,#b8e0e3 100%)}
+body.light-theme .t-arr{background:rgba(7,24,26,0.08);border-color:rgba(7,24,26,0.2);color:#07181a}
+body.light-theme .t-arr:hover{background:#07181a;color:#eff8f8}
+body.light-theme .sbtn{background:rgba(7,24,26,0.08);border-color:rgba(7,24,26,0.2);color:#07181a}
+body.light-theme .sbtn:hover{background:#07181a;color:#eff8f8}
+body.light-theme .fbox,.light-theme .call-popup{background:#d4ecee;border-color:rgba(7,24,26,0.2)}
+body.light-theme input,body.light-theme textarea,body.light-theme select{background:#eff8f8;border-color:rgba(7,24,26,0.2);color:#07181a}
+body.light-theme input::placeholder,body.light-theme textarea::placeholder{color:rgba(7,24,26,0.4)}
+body.light-theme .footer-dark{background:#07181a;color:#eff8f8}
+
+/* Light theme — Header & Nav */
+body.light-theme nav{background:rgba(239,248,248,0.97) !important;border-bottom-color:rgba(7,24,26,0.12) !important}
+body.light-theme nav.scrolled{background:rgba(239,248,248,0.99) !important}
+body.light-theme .nav-logo span{color:#07181a !important}
+body.light-theme .nav-links a{color:rgba(7,24,26,0.75) !important}
+body.light-theme .nav-links a:hover{color:#07181a !important;background:rgba(7,24,26,0.06) !important}
+body.light-theme .nav-links a.active{color:#07181a !important}
+
+/* Mobile menu light */
+body.light-theme .mob-btn{color:#07181a !important}
+body.light-theme .mob-btn span{background:#07181a !important}
+body.light-theme .mob-menu{background:rgba(239,248,248,0.99) !important;border-bottom-color:rgba(7,24,26,0.1) !important}
+body.light-theme .mob-menu a{color:rgba(7,24,26,0.78) !important}
+body.light-theme .mob-menu a:hover{color:#07181a !important;background:rgba(7,24,26,0.06) !important}
+body.light-theme .mob-link{color:rgba(7,24,26,0.75) !important}
+body.light-theme .mob-link:hover{color:#07181a !important;background:rgba(7,24,26,0.05) !important}
+body.light-theme .mob-cta{background:#07181a !important;color:#eff8f8 !important}
+body.light-theme .mob-cta:hover{background:#1a3638 !important;color:#eff8f8 !important}
+/* Lang switcher inside menu / nav in light mode */
+body.light-theme .lang-sw{background:rgba(7,24,26,0.07) !important;border-color:rgba(7,24,26,0.15) !important}
+body.light-theme .lb{color:rgba(7,24,26,0.5) !important}
+body.light-theme .lb.on{background:#07181a !important;color:#eff8f8 !important}
+/* Cards, sections, tags in light mode */
+body.light-theme .card,.light-theme .bc,.light-theme .ac,.light-theme .tc,.light-theme .sc{background:rgba(7,24,26,0.06) !important;border-color:rgba(7,24,26,0.12) !important}
+body.light-theme .tag{background:rgba(7,24,26,0.08);color:#07181a;border-color:rgba(7,24,26,0.15)}
+body.light-theme .h2 em{color:#07181a}
+body.light-theme .divl{background:linear-gradient(90deg,#07181a,transparent)}
+body.light-theme .hero{background:linear-gradient(135deg,#d4ecee 0%,#b8dde1 50%,#9ed0d5 100%)}
+body.light-theme .hbg{opacity:0.03}
+body.light-theme .sec.alt{background:rgba(7,24,26,0.04)}
+body.light-theme .bc,.light-theme .ac,.light-theme .pc{background:rgba(7,24,26,0.06);border-color:rgba(7,24,26,0.12)}
+body.light-theme .bc:hover,.light-theme .ac:hover{border-color:rgba(7,24,26,0.3)}
+body.light-theme .muted,.light-theme [style*="var(--muted)"]{color:rgba(7,24,26,0.55)}
+body.light-theme .fsub{background:#07181a;color:#eff8f8}
+body.light-theme .fsub:hover{background:#1a3638}
+body.light-theme .t-dot{background:rgba(7,24,26,0.2)}
+body.light-theme .t-dot.on{background:#07181a}
+
+/* Legacy selectors */
+body.light-theme .nbar{background:rgba(239,248,248,0.97) !important;border-bottom:1px solid rgba(7,24,26,0.12) !important}
+body.light-theme .nbar-scrolled{background:rgba(239,248,248,0.99) !important}
+body.light-theme .nlogo span{color:#07181a}
+
+/* Light theme — Footer */
+body.light-theme footer{background:rgba(210,235,238,0.97) !important;border-top-color:rgba(7,24,26,0.12) !important}
+body.light-theme .fbot{border-top-color:rgba(7,24,26,0.12)}
+body.light-theme .fbot p{color:rgba(7,24,26,0.45)}
+body.light-theme .fh4,.fh4,body.light-theme footer h4{color:#07181a}
+body.light-theme .fbp{color:rgba(7,24,26,0.6)}
+body.light-theme footer ul li a{color:rgba(7,24,26,0.6)}
+body.light-theme footer ul li a:hover{color:#07181a}
+body.light-theme .fmap-wrap iframe{filter:none !important}
+body.light-theme .call-popup{background:#eff8f8;border-color:rgba(7,24,26,0.2)}
+body.light-theme .call-popup h3{color:#07181a}
+body.light-theme .call-popup p{color:rgba(7,24,26,0.55)}
+body.light-theme .call-opt{background:rgba(7,24,26,0.05);border-color:rgba(7,24,26,0.15);color:#07181a}
+body.light-theme .call-opt:hover{background:#07181a;color:#eff8f8}
+body.light-theme .call-opt .cnum{color:#07181a}
+body.light-theme .call-opt:hover .cnum{color:#eff8f8}
+body.light-theme .call-popup-overlay{background:rgba(210,235,238,0.7)}
+body.light-theme .call-popup-close{background:rgba(7,24,26,0.08);color:#07181a}
+
+/* Theme button */
+.theme-btn{background:rgba(42,190,197,.08);border:1px solid rgba(42,190,197,0.2);color:var(--light);width:34px;height:34px;border-radius:8px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:.2s;flex-shrink:0}
+.theme-btn:hover{background:rgba(42,190,197,.2)}
+
+/* Light theme — Form inputs */
+body.light-theme textarea,
+body.light-theme input[type="text"],
+body.light-theme input[type="email"],
+body.light-theme input[type="tel"],
+body.light-theme input{background:rgba(7,24,26,0.05) !important;border-color:rgba(7,24,26,0.2) !important;color:#07181a !important}
+body.light-theme select{background:#eff8f8 !important;border-color:rgba(7,24,26,0.2) !important;color:#07181a !important}
+body.light-theme input::placeholder,
+body.light-theme textarea::placeholder{color:rgba(7,24,26,0.38) !important}
+body.light-theme label{color:rgba(7,24,26,0.55) !important}
+body.light-theme .fbox{background:rgba(7,24,26,0.06) !important;border-color:rgba(7,24,26,0.15) !important}
+body.light-theme .fo1,.light-theme .fo2{color:#07181a !important}
+
+/* Light theme — Hero stats (Programs / Visa-Free / Legal) */
+body.light-theme .sl{color:rgba(7,24,26,0.55) !important}
+body.light-theme .sn{color:#07181a !important}
+body.light-theme .hstats{border-top-color:rgba(7,24,26,0.15) !important}
+
+/* Light theme — Testimonials */
+body.light-theme .tc{background:rgba(7,24,26,0.06) !important;border-color:rgba(7,24,26,0.12) !important}
+body.light-theme .ttxt{color:rgba(7,24,26,0.72) !important}
+body.light-theme .tname{color:#07181a !important}
+body.light-theme .tloc{color:#07181a !important}
+body.light-theme .tav{background:#07181a;color:#eff8f8}
+body.light-theme .tstars{color:#07181a}
+
+/* Light theme — Programs section */
+body.light-theme .pc{background:rgba(7,24,26,0.06) !important;border-color:rgba(7,24,26,0.12) !important}
+body.light-theme .pc *{color:#07181a !important}
+body.light-theme .pc:hover{border-color:rgba(7,24,26,0.35) !important}
+
+/* Light theme — About cards, Benefits cards, Process steps */
+body.light-theme .ac,
+body.light-theme .bc,
+body.light-theme .sc{background:rgba(7,24,26,0.05) !important;border-color:rgba(7,24,26,0.12) !important}
+body.light-theme .ac *,
+body.light-theme .bc *,
+body.light-theme .sc *{color:#07181a !important}
+
+/* Light theme — Passport power cards */
+body.light-theme .pp-card{background:rgba(7,24,26,0.06) !important;border-color:rgba(7,24,26,0.12) !important}
+body.light-theme .pp-card *{color:#07181a !important}
+
+/* Light theme — FAQ */
+body.light-theme .fqi{background:rgba(7,24,26,0.05) !important;border-color:rgba(7,24,26,0.12) !important}
+body.light-theme .fqq{color:#07181a !important}
+body.light-theme .fqa{color:rgba(7,24,26,0.7) !important}
+body.light-theme .fqarr{color:#07181a !important}
+
+/* Light theme — Section headings and text */
+body.light-theme .h2{color:#07181a !important}
+body.light-theme .h2 em{color:#07181a !important;opacity:0.65}
+body.light-theme .tag{background:rgba(7,24,26,0.08) !important;color:#07181a !important;border-color:rgba(7,24,26,0.2) !important}
+body.light-theme p,
+body.light-theme li{color:rgba(7,24,26,0.72)}
+body.light-theme .divl{background:linear-gradient(90deg,#07181a,transparent) !important}
+
+/* Light theme — Hero text */
+body.light-theme .htag{background:rgba(7,24,26,0.08) !important;color:#07181a !important;border-color:rgba(7,24,26,0.2) !important}
+body.light-theme .hh{color:#07181a !important}
+body.light-theme .hh em{color:#07181a !important;opacity:0.6}
+body.light-theme .hs{color:rgba(7,24,26,0.68) !important}
+
+/* Light theme — Passport power "Visa-Free Countries" label */
+body.light-theme .psub{color:rgba(7,24,26,0.55) !important}
+body.light-theme .ppill{background:rgba(7,24,26,0.08) !important;border-color:rgba(7,24,26,0.2) !important;color:#07181a !important}
+
+/* Light theme — Footer Istanbul text */
+body.light-theme footer p,
+body.light-theme .fbp,
+body.light-theme footer .fbp{color:rgba(7,24,26,0.65) !important}
+body.light-theme footer p[style]{color:rgba(7,24,26,0.65) !important}
 </style>
 </head>
 <body>
@@ -254,6 +444,9 @@ footer{background:rgba(4,12,13,.97);border-top:1px solid var(--border);padding:5
     <li><a href="#contact" data-k="n_ct">Contact</a></li>
   </ul>
   <div class="nav-right">
+    <button class="theme-btn" id="themeBtn" onclick="toggleTheme()" title="Toggle Theme">
+      <svg id="themeIcon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+    </button>
     <div class="lang-sw">
       <button class="lb on" data-lang="en" onclick="setLang('en')">EN</button>
       <button class="lb" data-lang="ar" onclick="setLang('ar')">AR</button>
@@ -425,8 +618,11 @@ footer{background:rgba(4,12,13,.97);border-top:1px solid var(--border);padding:5
 
 <section class="sec alt" id="contact">
   <div class="inner">
-    <div class="cwrap">
-      <div class="cinfo">
+    <div class="contact-layout">
+
+      <!-- Row 1: Left info + Right form -->
+      <div class="contact-row1">
+        <div class="cinfo">
         <div class="tag" data-k="cn_tg">Get In Touch</div>
         <h2 data-k="cn_h">Start Your <em style="color:var(--teal);font-style:normal">Journey Today</em></h2>
         <div class="divl"></div>
@@ -436,9 +632,9 @@ footer{background:rgba(4,12,13,.97);border-top:1px solid var(--border);padding:5
           <a href="https://wa.me/905064850077" target="_blank" class="sbtn" title="WhatsApp"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg></a>
           <a href="https://www.facebook.com/share/1Ab6jSWGsJ/?mibextid=wwXIfr" target="_blank" class="sbtn" title="Facebook"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
           <a href="https://www.instagram.com/carivopas?igsh=OXhhNGg1MDd5ZTdy&utm_source=qr" target="_blank" class="sbtn" title="Instagram"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
-        </div>
-      <div class="fbox">
-        <div id="fBody">
+        </div></div>
+        <div class="fbox" id="fbox-main">
+          <div id="fBody">
           <div class="frow2">
             <div class="fg"><label data-k="ff">First Name</label><input type="text" id="i1" autocomplete="given-name"></div>
             <div class="fg"><label data-k="fl">Last Name</label><input type="text" id="i2" autocomplete="family-name"></div>
@@ -464,7 +660,13 @@ footer{background:rgba(4,12,13,.97);border-top:1px solid var(--border);padding:5
           <p data-k="fo2">Your request has been received. A Carivo advisor will contact you within 24 hours.</p>
         </div>
       </div>
-    </div>
+        <!-- Logo beside form -->
+        
+      </div>
+        </div>
+      </div>
+
+      
   </div>
 </section>
 
@@ -1092,6 +1294,27 @@ function hideCallPopup(e){
     document.body.style.overflow='';
   }
 }
+</script>
+<script>
+function toggleTheme(){
+  var body = document.body;
+  var btn = document.getElementById('themeBtn');
+  var isLight = body.classList.toggle('light-theme');
+  localStorage.setItem('carivo-theme', isLight ? 'light' : 'dark');
+  // Swap icon: sun (dark mode) ↔ moon (light mode)
+  btn.innerHTML = isLight
+    ? '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>'
+    : '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>';
+}
+
+// Apply saved theme on load
+(function(){
+  if(localStorage.getItem('carivo-theme') === 'light'){
+    document.body.classList.add('light-theme');
+    var btn = document.getElementById('themeBtn');
+    if(btn) btn.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>';
+  }
+})();
 </script>
 </body>
 </html>
